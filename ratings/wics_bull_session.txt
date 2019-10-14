@@ -1,0 +1,307 @@
+WiCS Bull Session
+Discussion of courses offered Spring 2018
+CS 104C Competitive Programming
+Downing
+Usually taught by Arnav and Ethan (two TAs)
+Go through example sets
+Homework is usually Codeforces
+Lots of opportunities for extra credit
+Really easy to pass, overkill for how much it teaches you for technical interviews
+People learn things they learn in 331
+Take it with Algorithms if you can, especially if theory isn’t your strong suit
+Learn theory and how to implement it at the same time
+You get as much out of it as you put into it
+CS 109 Computer Programming in Python
+Peters
+■ Heard that any class that teaches you a specific language is a lot more
+work than you think it is
+■ Starts out very easy and project 3 and 4 take like 15 hours
+■ Is pretty challenging
+■ Is an ok lecturer, distracts himself by talking about other languages
+■ Really really really solid grip on Python
+■ If you really pay attention and work hard you can do well in the class
+● CS 109 Ethical Foundation of CS
+○ Norman
+■ This is a new class and is only offered to freshmen
+■ She’s really dedicated and goal driven
+■ She can be kind of intense
+● CS 309 AI FRI
+○ Hart
+■ First year teaching it
+■ Is a nice guy
+■ Class isn’t particularly hard and is pretty interesting
+● CS 311 Discrete Math
+○ Bulko
+■ Wish it hadn’t been just Bulko, a little iffy
+■ He was alright
+■ He’s not the most interesting lecturer
+■ He’s pretty straight forward
+■ It’s easy to fall asleep in his class
+■ Was a little too easy for what it was
+● CS 312 Intro to Programming
+○ Scott
+■ Scott is great
+■ Best person to take 312 and 314 with
+■ Is a really good lecturer and keeps you interested, even if you know the
+material
+■ Spends time with you if you need help
+● CS 314 Data Structures
+○ Scott
+■ (See above)
+● C S 429(H) Comp Orgaization and Architecture
+○ Young
+■ Don’t take the 8am you’ll fall asleep
+● There’s a high chance you’ll fall asleep either way
+■ Young is a really nice guy, but he’s a pretty dry lecturer
+■ He does read from the ppt slides
+■ If you go to office hours he’s really nice
+■ Young is a little bit better of a lecturer than Novak
+■ Information he gives is very good but it all runs together a lot of the time
+■ Class can be a time sink if you’re not good at time management and
+starting right away
+■ Don’t take with other hard classes
+○ Gheith (Honors)
+■ Gheith is an amazing lecturer
+■ Really fun hard class
+■ Class is a lot of work
+■ Don’t take with anything hard
+● C S 331(H) Algorithms and Complexity
+○ Fraij
+■ He’s an ok lecturer
+■ The homework is a lot of work
+■ Can’t not pay attention and know everything right before the midterms
+■ Sometimes they change the schedule and don’t tell you (AKA look out for
+being switched into Price’s class)
+○ Ramachandran (Honors)
+■ Take H with anyone but Price
+■ Take Price if you’re already pretty comfortable with algorithms and you
+want to learn
+■ Would recommend Fraij over Ramachandran
+● C S 439 Priciples of Computer Systems
+○ Norman
+■ The dreaded OS class where you live in the lab
+■ It is a lot of work, don’t take other time demanding things with it
+■ Exams come straight from the slides
+■ Get good project partners, they’ll make or break the course
+● C S 340D Debugging & Verifying Programs
+○ Hunt
+■ Nice person but can come off as a jerk if you don’t get to know him
+■ Pretty good lecturer
+● C S 343 Artificial Intelligence
+○ Niekum
+■ If pulling tests from Berkeley they are going to be hard
+■ Can start Berkeley class online early (all materials are from there)
+■ Projects are fun
+● C S 345 Programming Languages
+○ Cook
+■ Learned Haskell and built an interpreter
+■ Very helpful in office hours, but you won’t learn a ton about things you
+can apply unless you want to go into functional programming
+■ Very theoretical course
+● C S 347 Data Management
+○ Cannata
+■ This class is bad
+■ Unstructured, kept constantly changing, don’t learn much at all
+■ Spent 5 or 6 weeks on SQL, learning SQL is easy, way too much time
+spent on this
+■ Next part is APEX, felt very obscure, outsourced the final projects, lots of
+missing information, kept changing the design spec
+■ Be weary
+■ Several people seconded be weary
+● C S 354 Computer Graphics
+○ Huang
+■ Professor is new
+● C S 354R Game Technology
+○ Abraham
+■ You need to have an interest in making games or the class will be boring
+■ The class is advertised as the final step before you enter industry in game
+dev
+■ You can do the bare minimum and still get a good grade, but you have the
+opportunity to be creative and think outside the box
+■ Groups are assigned and there are group projects
+■ No exams in this class
+● C S 354T Game Dev Capstone: 3-D Games
+○ Toprac
+■ You have to apply
+● C S 356 Computer Networks
+○ Gouda
+■ Gouda used to teach 311, took a break
+■ His lectures weren’t terrible but his grading was weird
+■ Might lose points even if you’re right
+■ Copied notes word for word onto the blackboard
+■ Sometimes hard to follow
+■ Answered questions well
+■ Exams with Lam are challenging, book is necessary in Lam’s class
+● C S 361 Intro to Computer Security
+○ Coffman-Wolf
+■ Probably one of the easiest classes you can take
+■ New professor, really nice
+■ Still has no idea what she wants to do with the class
+■ Currently read off the powerpoint, stuff you already know
+■ Great class to take with OS
+■ Very easy, projects are fun
+■ Tries to make class interesting
+■ Feels like it’s geared toward freshmen
+■ Class might be changing
+● C S 361S Network Security and Privacy
+○ Beasley
+■ Valuable with Jensen
+■ Great course material, really interesting
+● C S 371L IOS Mobile Computing
+○ Bulko
+■ A lot of the app development classes you might as well just teach yourself
+■ Nice guy
+■ Dry lecturer
+● CS 371M Mobile Computing
+○ Witchel
+■ Just throw code at you, nothing really new
+■ For Scott first half is tutorial, second half is a big project
+■ Might be nice if you have an idea for an app
+● C S 371P Object Oriented Programming
+○ Downing
+■ More of a class about C++ than OOP
+■ Downing has a systematic way that he teaches lectures
+■ OOP is easier than SWE
+■ Projects don’t take more than 5 or 6 hours
+■ Course is similar to SWE at the beginning
+■ Might not be worth it to take OOP and SWE
+■ Don’t take with OS - it’s a lot of work
+■ Heavy focus on details- have to know everything very well for the
+quizzes/tests
+■ Background in C++ makes class easier
+■ Projects aren’t hard at all
+● They’re just HackerRank programs
+■ Downing is very detailed oriented
+■ He cold calls in class to keep you engaged
+● C S 373 Software Engineering
+○ Downing
+■ SWE is Python
+■ More about Software Engineering Principles in the second half, big
+project for the second half
+■ Final project is really time consuming
+■ Basically got a list of technologies to use
+■ About ¾ of the time of OS, really heavy workload
+■ Groups are large
+■ Lots of stuff to do, especially if your group doesn’t know what they’re
+doing
+■ Structure it out well from the start, otherwise you’re in trouble
+■ One of few chances in the department to work in a large group
+■ You get to make a lot of decisions on your own which is cool
+■ Cold calls in class to keep you engaged
+■ Very logical teaching style
+● C S 374L Longhorn Startup
+○ Baer
+■ Must apply
+● C S 375 Compilers
+○ Novak
+■ Incredibly boring
+■ Incredibly boring
+■ Novak is boring, compilers is kind of cool if you’re interested
+■ Using old C code, but projects are pretty easy
+● C S 376 Computer Vision
+○ Grauman
+■ First time it’s being offered non-honors
+■ Mostly a researcher, head of computer vision at UT
+■ She’s working on some cool stuff in her research
+■ A lot of it is conventional vision that isn’t being used in industry now
+■ Doesn’t really touch on neural nets
+■ Lots of her stuff is adversarial networks
+■ If you want to learn vision good, but doesn’t apply to modern vision
+■ If you ever want to do research with her you have to take her class
+■ Image classification, identification, generation, etc
+■ Heard really good things about the honors version
+● She said it’s going to be the same as honors
+■ Good lecturer
+● C S 377P Programming for Performance
+○ Pingali
+■ Pingali is a very novel person
+■ Very famous guy, goes around the world to give talks
+■ Doesn’t teach much, usually only teaches graduate classes
+● C S 378 Behavioral Ethics: Digital Age
+○ Landolt
+■ Has really good reviews
+■ Supposed to be an easy chill professor from what people have heard
+■ She’s a business professor
+■ Pretty chill, probably won’t be very hard
+● C S 378 Cloud Computing
+○ Kulkarni
+■ New course
+■ Usually teaches modern web apps
+■ Pretty dry lecturer
+■ Lectures are always 5:30-7
+● If you get sleepy it’s hard to stay awake
+■ Projects in modern web apps weren’t that hard but were all very similar to
+each other
+● C S 378 Concurrency
+○ Rossbach
+■ This is a systems class
+■ Hasn’t taught undergrad before
+● C S 378 Cyberphysical Systems
+○ Mok
+■ Really boring
+■ Cars are cool
+■ Easy A
+● C S 378 Declarative Programming
+○ Lifschitz
+■ Learned logical programming (Klingo)
+■ Declare a bunch of facts and the program spits out more facts
+■ Kind of weird
+■ Textbooks were both packets of information that he handed out
+■ Exams were open note from those packets
+■ Projects were super weird
+■ Not very hard but not very useful
+● C S 378 Ethical Hacking
+○ Prosise
+■ Lots of recommended prereqs
+■ It’s doable without networks but it can be overwhelming
+■ It’s a lot of work if you don’t have the background
+● C S 378 Mobile News App Design
+○ Quigley
+■ Cross listed with journalism
+■ Work in groups with the end goal being IOS app
+■ You’re paired with other majors (teams are half journalism half CS)
+■ Design, create, and put the app in the IOS app store
+■ Journalism professor is supposed to be really amazing
+● C S 378 Multicore Operating Systems Impl.
+○ Peter
+■ It’s like OS on steroids in terms of workload
+■ Really nice guy, wants his students to learn, willing to meet after class and
+talk about things
+■ Class needed to be more structured from version last year
+■ Really really heavy workload
+● C S 378 Randomized Algorithms
+○ Zuckerman
+■ This class with Price is really hard (note that this is geared toward PhDs in
+theory)
+■ Note that this is undergrad and with a different professor
+● C S 378H Computer Graphics: Honors
+○ Vouga
+■ Vouga is an amazing lecturer
+■ Class is a lot of math
+■ Very linear algebra heavy
+● C S 378H Intro to Data Mining: Honors
+○ Klivans
+■ He’s really really smart
+■ He knows he’s smart and can be a jerk about it, especially if you’re easily
+intimidated
+■ Expects you to know things that you don’t necessarily know
+■ Kind of really snarky, if you can roll with the punches he’s a great teacher,
+if you can’t it’s not a good time
+■ You’ll learn a lot, but be prepared for that
+■ Extremely smart
+■ Hard for him to come down to student level
+■ Sense of humor is kind of degrading
+■ Covers really cool stuff, a lot of math
+Questions
+Experience taking grad courses in CS as an undergrad- how hard is it to convince the professor?
+Depends heavily on the professor. Some might require certain experience for them to sign off.
+Lots of grad classes are highly specified, so if you don’t have the experience it might be a
+struggle. Talk to the professor and get to know what they expect in their class.
+What would y’all suggest taking as an upper division with Algo?
+Algo is more conceptually difficult than a time commitment- but this depends heavily on how
+your brain works. Something that doesn’t take lots of brainpower, even if it’s a time
+commitment. High level of brain commitment, not high level of time commitment.
+Recommendations with OS?
+Don’t take anything else. If you have to take something that’s not a heavy time commitment.
+Take your VAPA if you can. Don’t take another group work class. No algo and no graphics with
+OS.
