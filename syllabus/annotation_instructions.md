@@ -3,7 +3,7 @@
 First, we need to install the necessary packages.
 
 ```shell
-pip3 install cdQA-annotator
+pip3 install cdQA
 ```
 
 And then import them:
