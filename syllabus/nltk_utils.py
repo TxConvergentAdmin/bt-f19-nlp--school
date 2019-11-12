@@ -117,5 +117,5 @@ assignment = Category('assignment',['reading','read','paper','essay','homework',
 categories = [professor,TA,final,midterm,assignment]
 
 # regex for the course ID (i.e. M 408M)
-course_name_re = r'[a-zA-Z]{1,4}\s?\d{3}[a-zA-Z]?'
+course_name_re = r'[a-zA-Z]+\s?\d{3}[a-zA-Z]?'
 time_range_reg = r'[12]?\d(?::\d{2})?([^\w\s])[12]?\d(?::\d{2})?(?:\s?[aApP]\.?[mM]\.?)?'

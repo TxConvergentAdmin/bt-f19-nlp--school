@@ -113,10 +113,11 @@ def main():
         prof = items['professor'][0]
         if prof.opt_vals['EML'] is None:
             name = prof.vals['PERSON'].split()
-            for eml in tag_map['EML']:
-                for n in name:
-                    if re.search(n,eml,re.IGNORECASE):
-                        prof.opt_vals['EML'] = eml
+            for emls in tag_map['EML']:
+                for eml in emls:
+                    for n in name:
+                        if re.search(n,eml,re.IGNORECASE):
+                            prof.opt_vals['EML'] = eml
 
     # look for a course ID (i.e. M 408M)
     courseID = None
