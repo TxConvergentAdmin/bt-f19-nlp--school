@@ -4,7 +4,8 @@ from nltk.tag.stanford import StanfordNERTagger
 from spacy.lang.en import English
 import nltk
 import json
-# nltk.download()
+#nltk.download()
+
 
 
 def pdf_to_tokens(dir_name='.'):
