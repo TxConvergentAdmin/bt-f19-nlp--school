@@ -4,6 +4,8 @@ from flask import jsonify
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__),'..'))
 import nltk_ner as ner
+sys.path.append(os.path.join(os.path.dirname(__file__),'../qa'))
+import qa_script as qa
 
 BUILD_DIR = os.path.join(os.path.dirname(__file__), 'build')
 
@@ -19,6 +21,12 @@ def index():
 def lecture_stuff():
     items = ner.info(ner.filename)
     return jsonify(ner.infoJSON(items))
+
+@app.route('/syllabus/qa')
+def syllabus_qa():
+    pipeline = qa.get_data(qa.filepath)
+    return jsonify(qa.run_queries(pipeline))
+
 
 ####
 
