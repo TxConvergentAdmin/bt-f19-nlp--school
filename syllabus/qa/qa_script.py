@@ -8,9 +8,9 @@ import re
 
 filepath = "nlp-school/syllabus/qa/syllabus_run_files/syllabus"
 
-def get_data():
+def get_data(filepath):
     # Loading data and filtering / preprocessing the documents
-    df = pdf_converter(directory_path='syllabus_run_files')
+    df = pdf_converter(directory_path=filepath)
     # print(df.dtypes)
     df = clean(df)
 
