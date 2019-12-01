@@ -5,6 +5,7 @@ import tika
 from tika import parser
 import re
 from enum import Enum, auto
+import json
 
 # regex expressions and classification objects used to extract information from a syllabus
 
@@ -54,13 +55,27 @@ class Item:
                 return False
         return True
 
+    def to_dict(self):
+        d = {}
+        d['name'] = self.name
+        for val in self.vals.keys():
+            if self.vals[val]:
+                d[val] = self.vals[val]
+        for val in self.opt_vals.keys():
+            if self.opt_vals[val]:
+                d[val] = self.opt_vals[val]
+        if self.line:
+            d['line'] = self.line
+        return d
+
     def __str__(self):
         return self.name + ' ' + str(self.vals) + ' ' + str(self.opt_vals)
 
     def __repr__(self):
         return self.__str__()
 
-date = {
+
+dates = {
     'MONTH': {
         'JANUARY' : r'(?:January|Jan\.?)',
         'FEBRUARY' : r'(?:February|Feb\.?)',
@@ -83,7 +98,6 @@ date = {
         'FRIDAY' : r'(?:Friday|Fri\.?|F\.?)',
         'SATURDAY' : r'(?:Saturday|Sat\.?|S\.?)',
         'SUNDAY' : r'(?:Sunday|Sun\.?)',
-        'RANGE' : r'(?=.)(?:M?T?W?(?:Th)?F?S?)'
     },
     'NUMBER' : {
         'NUM' : r'^(?:30|31|[0-2]?\d)(?:\w\w)?$'
@@ -92,17 +106,28 @@ date = {
         'F' : r'\d{1,2}[/\-]\d{1,2}'
     }
 }
+
+months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+days = {
+    'MWF' : 'Monday, Wednesday, and Friday',
+    'MW' : 'Monday and Wednesday',
+    'MF' : 'Monday and Friday',
+    'WF' : 'Wednesday and Friday',
+    'TTh' : 'Tuesday and Thursday'
+}
+
+
 date_reg = r'((?:)^'
-for k in date:
-    for j in date[k]:
-        date_reg+= (date[k][j]+'(?:$|:)|^')
+for k in dates:
+    for j in dates[k]:
+        date_reg+= (dates[k][j]+'(?:$|:)|^')
 date_reg = date_reg[:-9]+')'
 
 person = Field('PERSON',Tag_Type.NER)
 email = Field('EML',Tag_Type.TOKEN_RE,reg=r'[\w\.]*@.*\.[\w\.]*')
 number = Field('NBR',Tag_Type.LINE_RE,reg=r'\(?\d{3}\)?[\-\s]\d{3}[\-\s]\d{4}')
 time = Field('TME',Tag_Type.LINE_RE,reg=r'(?:[12]?\d(?::\d{2})?[^\w\s\.:][12]?\d(?::\d{2})?(?:\s?[aApP]\.?[mM]\.?)?|\d{1,2}\s?[aApP]\.?[mM]\.?|[12]?\d:\d{2}(?:\s?[aApP]\.?[mM]\.?)?)')
-date = Field('DTE',Tag_Type.TOKEN_RE,reg=date_reg,re_map=date)
+date = Field('DTE',Tag_Type.TOKEN_RE,reg=date_reg,re_map=dates)
 location = Field('LOC',Tag_Type.LINE_RE,reg=r'(?:(?:[A-Z][a-z]+|[A-Z]{3})\s\d\.\d{3}[A-Z]?|[iI]n [cC]lass)')
 
 fields = [person,email,number,time,date,location]
@@ -111,11 +136,12 @@ field_map = {'PERSON':person,'EML':email,'NBR':number,'TME':time,'DTE':date,'LOC
 professor = Category('professor',['professor', 'instructor'],[person],optional_fields=[email,number])
 TA = Category('TA',['TA','teaching assistant'],[person],optional_fields=[email,number])
 final = Category('final exam',['final'],[date],optional_fields=[time,location])
-midterm = Category('midterm',['midterm','exam','test'],[date],optional_fields=[time,location])
+midterm = Category('midterm',['midterm',' (?<!final\s)exam','(?<!final\s)test'],[date],optional_fields=[time,location])
 assignment = Category('assignment',['reading','read','paper','essay','homework','problem set'],[date],optional_fields=[time])
+office = Category('office hours',['office hours'],[date,time],optional_fields=[location])
 
-categories = [professor,TA,final,midterm,assignment]
+categories = [professor,TA,final,midterm,assignment,office]
 
 # regex for the course ID (i.e. M 408M)
-course_name_re = r'[a-zA-Z]{1,4}\s?\d{3}[a-zA-Z]?'
+course_name_re = r'[a-zA-Z]+\s?\d{3}[a-zA-Z]?'
 time_range_reg = r'[12]?\d(?::\d{2})?([^\w\s])[12]?\d(?::\d{2})?(?:\s?[aApP]\.?[mM]\.?)?'

@@ -1,5 +1,11 @@
 import os
 from flask import Flask
+from flask import jsonify
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__),'..'))
+import nltk_ner as ner
+sys.path.append(os.path.join(os.path.dirname(__file__),'../qa'))
+import qa_script as qa
 
 BUILD_DIR = os.path.join(os.path.dirname(__file__), 'build')
 
@@ -13,11 +19,18 @@ def index():
 #### NLP Endpoints Here
 @app.route('/lecture/stuff')
 def lecture_stuff():
-    # call nlp_func()
-    return 'result'
+    items = ner.info(ner.filename)
+    return jsonify(ner.infoJSON(items))
+
+@app.route('/syllabus/qa')
+def syllabus_qa():
+    pipeline = qa.get_data(qa.filepath)
+    return jsonify(qa.run_queries(pipeline))
+
 
 ####
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000), debug=True)
+    #app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000), debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
