@@ -30,13 +30,7 @@ def get_data(filepath):
 # store keys with colons following string, data in next string is value? then default to predict?
 def run_queries(cdqa_pipeline):
     qa_txt = """Who is the professor?^Who is the TA?
-    ^What is the grade distribution?^What materials are required?
-    ^What is the professor’s email?^What is the textbook?^Where is class?^Where are lectures?^Where are discussions?
-    ^Where are the professor’s office hours?^Where are the TA’s office hours?^When are tests?^When are quizzes?
-    ^When is the final?^When are the TA’s/professor’s office hours^Is attendance mandatory?^Is there a final?
-    ^Is a midterm dropped?^Are there any homework assignments dropped?^Are there any papers?^Is there a curve?
-    ^Do I have to buy a textbook?^How much is the final worth?
-    ^How many homework assignments are there?^How many midterms are there?"""
+    ^What materials are required?^When is the last midterm?"""
     queries = qa_txt.split("^")
 
     # Sending a question to the pipeline and getting prediction
@@ -95,24 +89,26 @@ def run_queries(cdqa_pipeline):
     return answer
 
 
-    def query(cdqa_pipeline, query):
-        prediction = cdqa_pipeline.predict(query=query, n_predictions=5)
-        index = -1
-        for t in range(0,4):
-            if len(prediction[t][0]) > 6:
-                index = t
-                break
+def query(cdqa_pipeline):
+    query = input("Enter a question for your syllabus: ")
 
-        if index == -1:
-            index = 0
+    prediction = cdqa_pipeline.predict(query=query, n_predictions=5)
+    index = -1
+    for t in range(0,4):
+        if len(prediction[t][0]) > 6:
+            index = t
+            break
 
-        print("Query Number: " + str(i))
-        print('Query: {}'.format(query))
-        print('Answer: {}'.format(prediction[index][0]))
-        print('Title: {}'.format(prediction[index][1]))
-        print('Paragraph: {}\n'.format(prediction[index][2]))
+    if index == -1:
+        index = 0
+
+    print('Query: {}'.format(query))
+    print('Answer: {}'.format(prediction[index][0]))
+    print('Title: {}'.format(prediction[index][1]))
+    print('Paragraph: {}\n'.format(prediction[index][2]))
 
 
 if __name__ == '__main__':
      cdqa_pipeline = get_data(filepath)
-     print(run_queries(cdqa_pipeline))
+     #print(run_queries(cdqa_pipeline))
+     query(cdqa_pipeline)

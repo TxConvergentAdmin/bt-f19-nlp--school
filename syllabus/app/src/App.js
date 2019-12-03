@@ -60,7 +60,6 @@ function App() {
                 let json = await data.json();
                 console.log(json);
                 setData2(json);
-                console.log({{data2.query}})
               }}> Load FAQ </NavDropdown.Item>
             </NavDropdown>
           </Nav>
