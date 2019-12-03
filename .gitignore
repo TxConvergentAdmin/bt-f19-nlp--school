@@ -32,3 +32,4 @@ yarn-error.log*
 
 app/node_modules/
 app/build/
+node_modules/
