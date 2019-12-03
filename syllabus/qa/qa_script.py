@@ -6,7 +6,7 @@ from cdqa.utils.converters import df2squad
 from remove_noise import clean
 import re
 
-filepath = "nlp-school/syllabus/qa/syllabus_run_files/syllabus"
+filepath = "../qa/syllabus_run_files"
 
 def get_data(filepath):
     # Loading data and filtering / preprocessing the documents
@@ -15,7 +15,7 @@ def get_data(filepath):
     df = clean(df)
 
     # Download if model not already downloaded
-    # download_model(model='bert-squad_1.1', dir='./models')
+    download_model(model='bert-squad_1.1', dir='./models')
 
     # Loading QAPipeline with CPU version of BERT Reader pretrained on SQuAD 1.1
     cdqa_pipeline = QAPipeline(reader='models/bert_qa_vCPU-sklearn.joblib')
@@ -29,12 +29,13 @@ def get_data(filepath):
 
 # store keys with colons following string, data in next string is value? then default to predict?
 def run_queries(cdqa_pipeline):
-    qa_txt = """Who is the professor?^Who is the TA?^What is the grading policy?^What is the grade distribution?^What materials are required?
+    qa_txt = """Who is the professor?^Who is the TA?
+    ^What is the grade distribution?^What materials are required?
     ^What is the professor’s email?^What is the textbook?^Where is class?^Where are lectures?^Where are discussions?
-    ^Where is homework posted?^Where are the professor’s office hours?^Where are the TA’s office hours?^When are tests?^When are quizzes?
-    ^When is the final?^When are the TA’s/professor’s office hours?^When is homework due?^Is attendance mandatory?^Is there a final?^Is the class hard?
-    ^Is a midterm dropped?^Are there any homework assignments dropped?^Is homework dropped?^Are there any papers?^Is there a curve?
-    ^Do I have to buy a textbook?^How much is the final worth?^How hard is this class?
+    ^Where are the professor’s office hours?^Where are the TA’s office hours?^When are tests?^When are quizzes?
+    ^When is the final?^When are the TA’s/professor’s office hours^Is attendance mandatory?^Is there a final?
+    ^Is a midterm dropped?^Are there any homework assignments dropped?^Are there any papers?^Is there a curve?
+    ^Do I have to buy a textbook?^How much is the final worth?
     ^How many homework assignments are there?^How many midterms are there?"""
     queries = qa_txt.split("^")
 
@@ -112,5 +113,6 @@ def run_queries(cdqa_pipeline):
         print('Paragraph: {}\n'.format(prediction[index][2]))
 
 
-# if __name__ == '__main__':
-#     cdqa_pipeline = get_data()
+if __name__ == '__main__':
+     cdqa_pipeline = get_data(filepath)
+     print(run_queries(cdqa_pipeline))

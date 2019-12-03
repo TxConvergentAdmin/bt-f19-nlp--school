@@ -6,22 +6,28 @@ def clean(df):
     # try to combine paragraphs into decent sizes so they're more understandable
     # if colon create new one?
     section = 0
-    # print(df['paragraphs'][0]) # debugging: show all paragraphs before processing
+    #print(df['paragraphs'][0]) # debugging: show all paragraphs before processing
     while section < len(df['paragraphs']):
         i = 0
         while i < len(df['paragraphs'][section]):
+            #df['paragraphs'][section][i] = re.sub('\s+', ' ', df['paragraphs'][section][i])
             paragraph = df['paragraphs'][section][i]
             split = paragraph.split()
             if re.search("^.*:\s*$", paragraph) or len(split) <= 5:
                 j = i
                 concatenated += paragraph
-                while i < len(df["paragraphs"][section]) and len(concatenated) < 100:
-                    if not re.search("^.*:\\s*$", paragraph): # or (len(df['paragraphs'][section][i+1]) > 50 and df['paragraphs'][section][j] < 10)
-                        concatenated += paragraph
-                        df['paragraphs'][section][i] = ""
-                        #print(1) # debugging: check concatenation
-                    i += 1
+                while i < len(df["paragraphs"][section]) and len(concatenated) < 120:
+                    #df['paragraphs'][section][i] = re.sub('\s+', ' ', df['paragraphs'][section][i])
                     paragraph = df['paragraphs'][section][i]
+                    concatenated +=  " " + paragraph
+                    df['paragraphs'][section][i] = ""
+                    # if re.search("^.*:\s*$", paragraph) and i+1 < len(df["paragraphs"][section]):
+                    #     i += 1
+                    #     #df['paragraphs'][section][i] = re.sub('\s+', ' ', df['paragraphs'][section][i])
+                    #     paragraph = df['paragraphs'][section][i]
+                    #     concatenated += " " + paragraph
+                    if len(concatenated) < 120:
+                        i += 1
                 df['paragraphs'][section][j] = concatenated
                 #print(df['paragraphs'][section][j]) # debugging: check concatentation
                 concatenated = "";

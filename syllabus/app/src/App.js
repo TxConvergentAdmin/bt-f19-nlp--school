@@ -32,6 +32,7 @@ const MyDocument = () => (
 
 function App() {
   let [data, setData] = useState({});
+  let [data2, setData2] = useState({});
   return (
     //navigationBar at the top
     <React.Fragment>
@@ -54,6 +55,13 @@ function App() {
                 console.log(json);
                 setData(json);
               }}> Load Data </NavDropdown.Item>
+              <NavDropdown.Item onClick={async () => {
+                let data = await fetch('/syllabus/qa');
+                let json = await data.json();
+                console.log(json);
+                setData2(json);
+                console.log({{data2.query}})
+              }}> Load FAQ </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -138,7 +146,7 @@ function App() {
     </React.Fragment>
   );
   // I think this should be it for rendering the syllabus, once you enter the directory name. LET ME KNOW if it doesn't work
-  // After yout get it to work, you shoudl just be able to enter the flexbox specifications under App.CSS. 
+  // After yout get it to work, you shoudl just be able to enter the flexbox specifications under App.CSS.
   // ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
 }
 
