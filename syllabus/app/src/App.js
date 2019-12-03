@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
@@ -31,6 +31,7 @@ const MyDocument = () => (
 );
 
 function App() {
+  let [data, setData] = useState({});
   return (
     //navigationBar at the top
     <React.Fragment>
@@ -47,6 +48,12 @@ function App() {
               <NavDropdown.Item href="#action/3.3">Different Class</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4"> Your Schedule </NavDropdown.Item>
+              <NavDropdown.Item onClick={async () => {
+                let data = await fetch('/lecture/stuff');
+                let json = await data.json();
+                console.log(json);
+                setData(json);
+              }}> Load Data </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
